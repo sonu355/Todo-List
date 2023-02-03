@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --dark: #374151;
+            --darker: #1f2937;
+            --darkest: #111827;
+            --gray: #6B7280;
+            --light: #EEE;
+            --pink: #EC4899;
+            --purple: #8B5Cf6;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: 'fire sans', sans-serif;
+        }
+        body{
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Task List 2021</h1>
+        <form id="new-task-form">
+            <input 
+                type="text"
+                id="new-task-input"
+                placeholder="what do you have planned" />
+            <input 
+                type="submit" 
+                id="new-task-submit"
+                value="Add task"/>
+        </form>
+    </header>
+    <section class="task-list">
+        <h2>Tasks</h2>
+        <div id="tasks">
+            <div class="task">
+                <div class="content">
+                    <input 
+                        type="text"
+                        class="text"
+                        value="my shiny task"
+                        readonly/>
+                </div>
+                <div class="actions">
+                    <button class="edit">Delete</button>
+                    <button class-="delete">Edit</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
