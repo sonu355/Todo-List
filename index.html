@@ -90,27 +90,45 @@
         </tbody>
       </table>
     </div>
-  </div>    
+  </div>
   <script>
     function getAndUpdate() {
       console.log("updating")
       tit = document.getElementById('title').value;
       desc = document.getElementById('description').value;
-      console.log(tit,desc)
+      console.log(tit, desc)
       if (localStorage.getItem('itemsJson') == null) {
-        itemJsonarray = []; 
+        itemJsonarray = [];
         itemJsonarray.push([tit, desc])
         console.log(itemJsonarray)
         localStorage.setItem('itemsJson', JSON.stringify(itemJsonarray))
       } else {
         itemJsonarrayStr = localStorage.getItem('itemsJson')
-        itemJsonarray = JSON.parse(itemJsonarrayStr)
-        itemJsonarray.push([tit, desc])
-        localStorage.setItem('itemsJson', JSON.stringify(itemJsonarray))
-      }
+        itemJsonarray = JSON.parse(itemJsonarrayStr)<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The Array.splice() method adds array elements:</p>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+// At position 2, add 2 elements: 
+fruits.splice(2, 1, "Lemon", "Kiwi");
+
+document.getElementById("demo").innerHTML = fruits;
+</script>
+
+</body>
+</html>
+
       update()
 
-    } 
+    }
 
     function update() {
       if (localStorage.getItem('itemsJson') == null) {
@@ -134,7 +152,6 @@
       });
       tableBody.innerHTML = str;
     }
-
     add = document.getElementById('add')
     add.addEventListener("click", getAndUpdate);
     update()
@@ -149,8 +166,8 @@
     }
 
     function clearStore() {
-      if(confirm("you really want yo clear"))
-      console.log("clearing the storage...")
+      if (confirm("you really want yo clear"))
+        console.log("clearing the storage...")
       localStorage.clear();
       update()
     }
