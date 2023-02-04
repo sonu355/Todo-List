@@ -191,6 +191,7 @@
                 e.preventDefault();
 
                 const task = input.value;
+                console.log(task)
                 if(!task){
                     alert("Please fill out the task")
                     return;
@@ -201,7 +202,7 @@
 
                 const task_content_el = document.createElement('div')
                 task_content_el.classList.add('content')
-               // task_content_el.innerText = task
+                task_content_el.innerText = task
                 //console.log(task_content_el)
 
                 task_el.appendChild(task_content_el);
@@ -222,13 +223,15 @@
 
                 const task_edit_el = document.createElement("button")
                 task_edit_el.classList.add('edit')
-                task_edit_el.innerText = "Edit"
+                task_edit_el.innerHTML = "Edit"
+                console.log(task_edit_el)
 
                 const task_del_el = document.createElement('button')
                 task_del_el.classList.add('delete')
-                task_del_el.innerText = "Delete"
+                task_del_el.innerHTML = "Delete"
 
                 task_action_el.appendChild(task_edit_el)
+                console.log(task_content_el)
                 task_action_el.appendChild(task_del_el)
 
                 task_el.appendChild(task_action_el)
@@ -239,7 +242,7 @@
                 input.value = ""
 
                 task_edit_el.addEventListener('click', (e) => {
-                   if (task_edit_el.innerText.toLowerCase == "edit") {
+                   if (task_edit_el.innerText.toLowerCase() == "edit") {
                         task_edit_el.innerText = "Save"
                         task_input_el.removeAttribute("readonly")
                         task_input_el.focus()
@@ -249,8 +252,8 @@
 
                    }
                 })
-                task_del_el.addEventListener('click', (e){
-                    
+                task_del_el.addEventListener('click', (e) => {
+                    list_el.removeChild(task_el);
                 })
             })
         })
