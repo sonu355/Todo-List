@@ -201,7 +201,7 @@
 
                 const task_content_el = document.createElement('div')
                 task_content_el.classList.add('content')
-                task_content_el.innerText = task
+               // task_content_el.innerText = task
                 //console.log(task_content_el)
 
                 task_el.appendChild(task_content_el);
@@ -222,11 +222,11 @@
 
                 const task_edit_el = document.createElement("button")
                 task_edit_el.classList.add('edit')
-                task_edit_el.innerHTML = "Edit"
+                task_edit_el.innerText = "Edit"
 
                 const task_del_el = document.createElement('button')
                 task_del_el.classList.add('delete')
-                task_del_el.innerHTML = "Delete"
+                task_del_el.innerText = "Delete"
 
                 task_action_el.appendChild(task_edit_el)
                 task_action_el.appendChild(task_del_el)
@@ -238,8 +238,20 @@
 
                 input.value = ""
 
-                
+                task_edit_el.addEventListener('click', (e) => {
+                   if (task_edit_el.innerText.toLowerCase == "edit") {
+                        task_edit_el.innerText = "Save"
+                        task_input_el.removeAttribute("readonly")
+                        task_input_el.focus()
+                   } else {
+                        task_input_el.setAttribute("readonly", "readonly")
+                        task_edit_el.innerText = "Edit"
 
+                   }
+                })
+                task_del_el.addEventListener('click', (e){
+                    
+                })
             })
         })
     </script>
