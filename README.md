@@ -9,8 +9,8 @@ A simple and user-friendly to-do list application built with JavaScript, HTML, a
 - Persistent storage using local storage
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/[username]/javascript-todo-list.git`
-2. Navigate to the project directory: `cd javascript-todo-list`
+1. Clone the repository: `git clone https://github.com/sonu355/Todo-List.git`
+2. Navigate to the project directory: `cd Todo-List`
 3. Open the `index.html` file in your browser to run the application.
 
 ## Usage
